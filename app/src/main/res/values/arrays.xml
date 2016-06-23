@@ -1,0 +1,10 @@
+<resources>
+    <array name="array_location">
+        <item>Aboretum</item>
+        <item>CBD</item>
+        <item>Donholm</item>
+        <item>Madraka</item>
+        <item>Kilimani</item>
+        <item>Westlands-ABC</item>
+    </array>
+</resources>

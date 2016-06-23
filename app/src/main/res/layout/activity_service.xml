@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/homeScroll">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="8.2"
+            android:orientation="vertical"
+            tools:context="masterpiecenet.mfundi.view.HomeTabView">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_weight="4"
+                android:padding="@dimen/padding_home_button">
+            </LinearLayout>
+
+           <!-- <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:background="@android:color/darker_gray">-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:padding="@dimen/padding_search"
+                    android:background="#d6d6d6"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tell us how we can help you today:"/>
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:padding="@dimen/padding_home_button"
+                android:background="@android:color/white">
+
+                <ListView android:id="@+id/listViewServices"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Proceed"
+                    android:background="@drawable/home_button_previous"
+                    android:drawableRight="@drawable/img_next"
+                    android:padding="@dimen/padding_home_button"
+                    android:textColor="@color/white"
+                    android:id="@+id/btnServiceProceed"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

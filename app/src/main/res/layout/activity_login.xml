@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/locationScroll">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="150"
+            android:orientation="vertical"
+            tools:context="masterpiecenet.mfundi.view.HomeTabView">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_weight="1"
+                android:background="@android:color/white">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding_search">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/blue_dark"
+                            android:drawableTop="@drawable/ic_google"
+                            android:id="@+id/btnSignGoogle"
+                            android:text="Sign in via Google"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/blue_dark"
+                            android:drawableTop="@drawable/ic_facebook"
+                            android:id="@+id/btnSignFacebook"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_weight="1"
+                            android:text="Connect via Facebook"
+                            android:layout_gravity="center_vertical" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/img_or"
+                        android:id="@+id/viewLine1" />
+ <!--                   <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="or"
+                        android:layout_weight="1"/>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/login_horizontal_margin"
+                        android:background="#000000"
+                        android:id="@+id/viewLine2" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_search">
+                    <TextView
+                        android:id="@+id/tvHaveAnAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Already have an account?"
+                        android:gravity="center" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/cbSignIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Sign In"
+                        android:padding="@dimen/padding_search"
+                        android:textColor="@color/black"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <EditText
+                            android:id="@+id/editTextFullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/img_user"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:hint="Full Name"
+                            android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/img_email"
+                        android:hint="Email"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/editTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/img_password"
+                        android:hint="Password"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+<!--                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <EditText
+                        android:id="@+id/editTextConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/img_password"
+                        android:hint="Confirm Password"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:inputType="textPassword" />
+                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:textColor="@color/blue_dark"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:padding="@dimen/padding_search"
+                        android:text="+254"
+                        android:textAlignment="gravity"
+                        android:gravity="center"/>
+                    <EditText
+                        android:id="@+id/editTextPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:drawableRight="@drawable/img_tel"
+                        android:hint="Tel"
+                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verify"
+                        android:background="@drawable/home_button_next"
+                        android:padding="@dimen/padding_search"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnVerifyTel"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/padding"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="@dimen/padding_search"
+                        android:background="#000000"
+                        android:id="@+id/viewLine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Forgot Password?"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/forgotPass"
+                        android:textColor="@color/blue_dark"
+                        android:clickable="true"
+                        android:layout_below="@+id/viewLine"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="149">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sign Up"
+                    android:background="@drawable/home_button_previous"
+                    android:drawableRight="@drawable/img_next"
+                    android:padding="@dimen/padding_home_button"
+                    android:textColor="@color/white"
+                    android:id="@+id/btnRegisterUserProceed"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

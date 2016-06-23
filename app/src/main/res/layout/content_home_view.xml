@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/background_image"
+    tools:context=".view.HomeView"
+    tools:showIn="@layout/app_bar_home_view">
+
+<!--    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/homeScroll">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:orientation="vertical"
+            android:layout_gravity="fill_vertical"
+            tools:context="masterpiecenet.mfundi.view.HomeTabView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/padding_home_button"
+                    android:id="@+id/btnSearchFundi"
+                    android:textAlignment="gravity"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:background="@color/white">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Electrical"
+                    android:drawableTop="@drawable/img_plug"
+                    android:padding="@dimen/padding_home_button"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white"
+                    android:background="#E6B89C"
+                    android:id="@+id/btnElectrical"
+                    android:textAlignment="gravity"
+                    android:gravity="center"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Plumbing"
+                    android:drawableTop="@drawable/img_pipes"
+                    android:padding="@dimen/padding_home_button"
+                    android:textColor="@color/white"
+                    android:id="@+id/btnPlumbing"
+                    android:background="#C4AF9A"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAlignment="gravity"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </View>-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Cleaning"
+                    android:drawableTop="@drawable/img_vacumn"
+                    android:padding="@dimen/padding_home_button"
+                    android:textColor="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:background="#FB9F89"
+                    android:id="@+id/btnCleaning"
+                    android:textAlignment="gravity"
+                    android:gravity="center"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Gardening"
+                    android:drawableTop="@drawable/img_flowers"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/padding_home_button"
+                    android:id="@+id/btnGardening"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:background="#81AE9D"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="gravity"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
